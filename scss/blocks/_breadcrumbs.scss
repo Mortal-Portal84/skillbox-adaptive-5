@@ -1,0 +1,52 @@
+.breadcrumbs {
+  margin-bottom: 11px;
+
+  &__list {
+    display: flex;
+    gap: 19px;
+    padding: 0;
+    margin: 0;
+    $root: &;
+
+    &-item {
+      list-style: none;
+
+      &:last-child {
+        overflow: hidden;
+      }
+    }
+  }
+
+  &__link {
+    color: $color-storm-grey-1;
+    position: relative;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+
+    @include vp-1024 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    &:not(a) {
+      display: block;
+      color: $color-black-russian;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -23%;
+      width: 3px;
+      height: 3px;
+      background-color: $color-storm-grey-1;
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

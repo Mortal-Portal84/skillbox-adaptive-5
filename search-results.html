@@ -55,16 +55,43 @@
   </div>
 </header>
 <main>
-  <section class="breadcrumbs">
-    <ul class="breadcrumbs__list">
-      <li class="breadcrumbs__list-item">
-        <a class="breadcrumbs__link" href="#">Главная</a>
-      </li>
+  <div class="breadcrumbs">
+    <div class="container">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__list-item">
+          <a class="breadcrumbs__link" href="#">Главная</a>
+        </li>
 
-      <li class="breadcrumbs__list-item breadcrumbs__list-item--active">
-        <a class="breadcrumbs__link" href="#">Результаты поиска</a>
-      </li>
-    </ul>
+        <li class="breadcrumbs__list-item breadcrumbs__list-item--active">
+          <span class="breadcrumbs__link">Результаты поиска</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="search-results">
+    <div class="container">
+      <h2 class="search-results__title">Результаты поиска</h2>
+
+      <div class="search-results__wrapper">
+        <form class="search-results__form">
+          <div class="custom-input">
+            <input class="custom-input__field" type="text" id="search" name="search">
+            <label class="custom-input__label" for="search">
+              <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-search"></use>
+              </svg>
+            </label>
+            <button class="custom-input__reset-btn" type="reset">
+              <svg class="custom-input__icon" width="14" height="14" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-cross"></use>
+              </svg>
+            </button>
+            <span class="custom-input__error">Неверно заполненное поле</span>
+          </div>
+        </form>
+      </div>
+    </div>
   </section>
 
 </main>
@@ -283,5 +310,7 @@
     </div>
   </div>
 </footer>
+
+<script src="main.js"></script>
 </body>
 </html>
