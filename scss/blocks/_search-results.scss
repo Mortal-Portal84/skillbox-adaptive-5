@@ -1,4 +1,6 @@
 .search-results {
+  overflow: hidden;
+
   &__title {
     position: relative;
     margin: 0;
@@ -16,6 +18,7 @@
     @include vp-1024 {
       font-size: 40px;
       line-height: 44px;
+      padding: 28px 0 34px;
     }
 
     &::after {
@@ -32,6 +35,10 @@
       @include vp-768 {
         bottom: -3px;
       }
+
+      @include vp-1024 {
+        margin: 0 0 0 -40px;
+      }
     }
   }
 
@@ -39,12 +46,33 @@
     padding: 28px 0 58px;
 
     @include vp-768 {
-      padding: 35px 0 62px;
+      padding: 35px 0 78px;
+    }
+
+    @include vp-1024 {
+      max-width: 806px;
+      margin: 0 auto;
+      padding: 83px 0 97px;
     }
   }
 
   &__form {
     margin: 0 0 60px 0;
+
+    @include vp-1024 {
+      display: flex;
+      gap: 16px;
+      margin: 0 0 80px 0;
+    }
+  }
+
+  &__form-btn {
+    display: none;
+
+    @include vp-1024 {
+      display: block;
+      width: 120px;
+    }
   }
 
   &__results {
@@ -56,6 +84,10 @@
     &-item {
       &:not(:last-child) {
         margin-bottom: 40px;
+
+        @include vp-1024 {
+          margin-bottom: 60px;
+        }
       }
     }
 
@@ -64,18 +96,44 @@
       margin: 0 0 12px 0;
       font-size: 18px;
       line-height: 22px;
+
+      @include vp-1024 {
+        font-size: 20px;
+        line-height: 24px;
+      }
     }
 
     &-text {
       margin: 0;
       font-size: 14px;
       line-height: 18px;
+
+      @include vp-1024 {
+        font-size: 16px;
+        line-height: 22px;
+      }
     }
 
     &-pp {
       @include vp-768 {
         display: none;
       }
+    }
+
+    @include vp-768 {
+      margin: 0 0 38px 0;
+    }
+
+    @include vp-1024 {
+      margin: 0 0 58px 0;
+    }
+  }
+
+  &__pagination {
+    margin: 0 0 39px 0;
+
+    @include vp-1024 {
+      margin: 0 0 59px 0;
     }
   }
 
@@ -93,6 +151,10 @@
       font-weight: 400;
       font-size: 13px;
       line-height: 16px;
+    }
+
+    @include vp-768 {
+      gap: 35px;
     }
   }
 }

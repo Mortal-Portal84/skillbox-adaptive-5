@@ -7,4 +7,12 @@
   @include vp-768 {
     padding: 0 20px;
   }
+
+  @include vp-1024 {
+    padding: 0 40px;
+  }
+
+  @include vp-1304 {
+    max-width: 1304px;
+  }
 }

@@ -70,7 +70,7 @@
   </div>
 
   <section class="search-results">
-    <div class="container">
+    <div class="container search-results__container">
       <h2 class="search-results__title">Результаты поиска</h2>
 
       <div class="search-results__wrapper">
@@ -89,6 +89,8 @@
             </button>
             <span class="custom-input__error">Неверно заполненное поле</span>
           </div>
+
+          <button class="btn btn--secondary search-results__form-btn">Найти</button>
         </form>
 
         <ul class="search-results__results">
@@ -162,7 +164,7 @@
           </li>
         </ul>
 
-        <ul class="pagination">
+        <ul class="pagination search-results__pagination">
           <li class="pagination__item pagination__item--arrow-left pagination__item--disabled" aria-disabled="true">
             <a class="pagination__link" href="#">
               <svg class="pagination__icon" width="16" height="16" aria-hidden="true">
