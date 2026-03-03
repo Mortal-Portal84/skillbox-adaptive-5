@@ -35,3 +35,11 @@ paginationList.forEach((item) => {
     }
   })
 })
+
+//cookie
+const cookiesModal = document.querySelector('.cookies')
+const cookiesBtn = document.querySelector('.cookies__message-button')
+
+cookiesBtn.addEventListener('click', () => {
+  cookiesModal.classList.remove('cookies--active')
+})

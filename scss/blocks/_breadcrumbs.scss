@@ -28,6 +28,14 @@
     font-weight: 400;
     font-size: 13px;
     line-height: 16px;
+    transition: color 0.3s ease;
+    outline: none;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-free-speech-blue;
+      outline: none;
+    }
 
     @include vp-1024 {
       font-size: 14px;

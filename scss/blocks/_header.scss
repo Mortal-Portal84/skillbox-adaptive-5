@@ -36,6 +36,7 @@
     display: flex;
     margin: 0 auto 0 0;
     color: $color-royal-blue-1;
+    outline: none;
 
     @include vp-768 {
       margin: 0 40px 0 0;
@@ -64,11 +65,7 @@
 
     &:last-of-type {
       @include vp-1024 {
-        margin: 0 8px 0 0;
-      }
-
-      @include vp-1304 {
-        margin: 0 13px 0 0;
+        margin: 0 14px 0 0;
       }
     }
   }
@@ -119,9 +116,11 @@
 
     &--active {
       color: $color-royal-blue-1;
+      outline: none;
 
       &:hover,
       &:focus-visible {
+        outline: none;
         color: $color-royal-blue-2;
       }
     }

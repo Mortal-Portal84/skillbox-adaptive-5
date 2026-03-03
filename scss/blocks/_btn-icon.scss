@@ -19,10 +19,12 @@
 
   &:hover,
   &:focus-visible {
+    outline: none;
     color: $color-royal-blue-1;
   }
 
   &--light {
+    outline: none;
     color: $color-mischka;
   }
 }

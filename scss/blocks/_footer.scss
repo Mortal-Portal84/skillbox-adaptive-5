@@ -1,6 +1,6 @@
 .footer {
   padding: 40px 0;
-  background-color: $color-solitude-2;
+  background-color: $color-solitude-1;
 
   @include vp-1024 {
     padding: 80px 0;
@@ -37,6 +37,7 @@
     display: flex;
     margin: 0 0 32px 0;
     color: $color-royal-blue-1;
+    outline: none;
 
     &:hover,
     &:focus-visible {
@@ -83,6 +84,7 @@
     font-size: 20px;
     line-height: 28px;
     font-weight: 600;
+    outline: none;
 
     &:focus-visible,
     &:hover {
@@ -112,6 +114,7 @@
     align-items: center;
     column-gap: 16px;
     margin: 0 0 24px 0;
+    outline: none;
 
     @include vp-768 {
       margin: 0 0 32px 0;
@@ -162,6 +165,7 @@
 
   &__feedback-btn {
     width: 160px;
+    outline: none !important;
   }
 
   &__location {
@@ -176,6 +180,7 @@
     font-size: 14px;
     line-height: 18px;
     color: $color-royal-blue-1;
+    outline: none;
 
     @include vp-1304 {
       font-size: 16px;
@@ -206,6 +211,11 @@
     }
   }
 
+  &__nav-list--pp {
+    max-width: 400px;
+    padding: 11px 0 0 0;
+  }
+
   &__nav-item {
     display: flex;
   }
@@ -213,6 +223,8 @@
   &__nav-link {
     font-size: 14px;
     line-height: 18px;
+    transition: color 0.3s ease;
+    outline: none;
 
     @include vp-1304 {
       font-size: 16px;
@@ -237,7 +249,7 @@
 
   &__policy {
     row-gap: 8px;
-    margin: 0 0 31px 0;
+    margin: 0 0 29px 0;
 
     @include vp-768 {
       row-gap: 10px;
@@ -254,6 +266,9 @@
   }
 
   &__policy-link {
+    transition: color 0.3s ease;
+    outline: none;
+
     &:focus-visible,
     &:hover {
       color: $color-black-russian;
@@ -295,6 +310,8 @@
     font-size: 13px;
     line-height: 16px;
     color: $color-storm-grey-1;
+    transition: color 0.3s ease;
+    outline: none;
 
     &:focus-visible,
     &:hover {

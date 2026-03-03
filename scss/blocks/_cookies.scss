@@ -1,0 +1,112 @@
+.cookies {
+  display: none;
+  max-width: 330px;
+  width: 100%;
+  position: fixed;
+  bottom: 22px;
+  right: 15px;
+
+  @include vp-768 {
+    max-width: 380px;
+  }
+
+  @include vp-1304 {
+    position: fixed;
+    bottom: -7px;
+    right: 16px;
+  }
+
+  &__wrapper {
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px 0 #32364133;
+  }
+
+  &__like-button {
+    position: absolute;
+    right: 0;
+    top: -65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      padding: 0;
+    width: 48px;
+    height: 48px;
+    background-color: $color-black-russian;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      background-color: $color-blue-zodiac;
+    }
+  }
+
+  &__message {
+    display: flex;
+    padding: 12px 4px 12px 12px;
+    border-radius: 12px;
+    background-color: $color-white;
+    $root: &;
+
+    &-text {
+      margin: 0;
+      padding: 0 16px 0 0;
+      max-width: 267px;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 12px;
+      border-right: solid 1px $color-hawkes-blue;
+
+      @include vp-768 {
+        max-width: 300px;
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      @include vp-1024 {
+        font-size: 13px;
+        line-height: 16px;
+      }
+    }
+
+    &-link {
+      color: $color-royal-blue-1;
+      transition: color 0.3s ease;
+      outline: none;
+
+      &:hover, &:focus-visible {
+        color: $color-royal-blue-2;
+      }
+    }
+
+    &-button {
+      padding: 16px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      color: $color-mischka;
+      transition: color 0.3s ease;
+
+      &:hover, &:focus-visible {
+        color: $color-royal-blue-1;
+      }
+
+      @include vp-768 {
+        width: 65px;
+      }
+    }
+
+    &-icon {
+      width: 13px;
+      height: 13px;
+    }
+  }
+
+  &--active {
+    display: block;
+  }
+}
