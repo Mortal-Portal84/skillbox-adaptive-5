@@ -1059,22 +1059,6 @@ a {
   text-align: center;
   color: inherit;
 }
-.pagination__link--counter {
-  border-radius: 8px;
-  counter-increment: counter;
-  transition: background-color 0.3s ease;
-}
-.pagination__link--counter::before {
-  content: counter(counter);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.pagination__link--counter:hover, .pagination__link--counter:focus-visible {
-  outline: none;
-  background-color: #D2D4DA;
-}
 .pagination__item {
   position: relative;
   border-radius: 8px;
@@ -1097,8 +1081,39 @@ a {
   color: #AEAEAE;
   outline: none;
 }
+.pagination__item--disabled:hover a, .pagination__item--disabled:focus-visible a {
+  outline: none;
+}
 .pagination__item--disabled a {
+  outline: none;
   cursor: not-allowed;
+}
+.pagination__item--counter a {
+  border-radius: 8px;
+  counter-increment: counter;
+  transition: background-color 0.3s ease;
+}
+.pagination__item--counter a::before {
+  content: counter(counter);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.pagination__item--counter a:hover, .pagination__item--counter a:focus-visible {
+  outline: none;
+  background-color: #D2D4DA;
+}
+.pagination__item--arrow-right, .pagination__item--arrow-left {
+  border-radius: 8px;
+  outline: none;
+}
+.pagination__item--arrow-right:not(.pagination__item--disabled) a, .pagination__item--arrow-left:not(.pagination__item--disabled) a {
+  transition: background-color 0.3s ease;
+}
+.pagination__item--arrow-right:not(.pagination__item--disabled) a:hover, .pagination__item--arrow-right:not(.pagination__item--disabled) a:focus-visible, .pagination__item--arrow-left:not(.pagination__item--disabled) a:hover, .pagination__item--arrow-left:not(.pagination__item--disabled) a:focus-visible {
+  background-color: #D2D4DA;
+  border-radius: 8px;
   outline: none;
 }
 

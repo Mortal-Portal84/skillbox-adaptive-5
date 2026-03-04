@@ -18,29 +18,6 @@
     line-height: 18px;
     text-align: center;
     color: inherit;
-    $root: &;
-
-    &--counter {
-      border-radius: 8px;
-      counter-increment: counter;
-      transition: background-color 0.3s ease;
-
-      &::before {
-        content: counter(counter);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      &:hover,
-      &:focus-visible {
-        outline: none;
-        background-color: $color-link-water;
-      }
-    }
-
-
   }
 
   &__item {
@@ -68,11 +45,54 @@
       background-color: $color-white-smoke;
       color: $color-dark-gray;
       outline: none;
+
+      &:hover a,
+      &:focus-visible a{
+        outline: none;
+      }
     }
 
     &--disabled a {
-      cursor: not-allowed;
       outline: none;
+      cursor: not-allowed;
+    }
+
+    &--counter a {
+      border-radius: 8px;
+      counter-increment: counter;
+      transition: background-color 0.3s ease;
+
+      &::before {
+        content: counter(counter);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:hover,
+      &:focus-visible {
+        outline: none;
+        background-color: $color-link-water;
+      }
+    }
+
+    &--arrow-right,
+    &--arrow-left {
+      border-radius: 8px;
+      outline: none;
+    }
+
+    &--arrow-right:not(&--disabled) a,
+    &--arrow-left:not(&--disabled) a {
+      transition: background-color 0.3s ease;
+
+      &:hover,
+      &:focus-visible {
+        background-color: $color-link-water;
+        border-radius: 8px;
+        outline: none;
+      }
     }
   }
 }
