@@ -25,38 +25,6 @@
     border-radius: 8px;
     outline: none;
 
-    &--active {
-      font-size: 14px;
-      line-height: 18px;
-      background-color: $color-black-russian;
-      color: $color-white;
-
-      & a {
-        font-weight: 700;
-      }
-
-      &:hover a,
-      &:focus-visible a {
-        background-color: $color-black-russian;
-      }
-    }
-
-    &--disabled {
-      background-color: $color-white-smoke;
-      color: $color-dark-gray;
-      outline: none;
-
-      &:hover a,
-      &:focus-visible a{
-        outline: none;
-      }
-    }
-
-    &--disabled a {
-      outline: none;
-      cursor: not-allowed;
-    }
-
     &--counter a {
       border-radius: 8px;
       counter-increment: counter;
@@ -75,6 +43,36 @@
         outline: none;
         background-color: $color-link-water;
       }
+    }
+
+    &--active {
+      background-color: $color-black-russian;
+      color: $color-white;
+
+      a {
+        font-weight: 700;
+
+        &:hover,
+        &:focus-visible {
+          background-color: $color-black-russian;
+        }
+      }
+    }
+
+    &--disabled {
+      background-color: $color-white-smoke;
+      color: $color-dark-gray;
+      outline: none;
+
+      &:hover a,
+      &:focus-visible a {
+        outline: none;
+      }
+    }
+
+    &--disabled a {
+      outline: none;
+      cursor: not-allowed;
     }
 
     &--arrow-right,
