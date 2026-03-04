@@ -95,6 +95,8 @@
       margin: 0 0 12px 0;
       font-size: 18px;
       line-height: 22px;
+      transition: color 0.3s ease;
+      outline: none;
 
       @include vp-1024 {
         font-size: 20px;
@@ -106,6 +108,7 @@
       margin: 0;
       font-size: 14px;
       line-height: 18px;
+      outline: none;
 
       @include vp-1024 {
         font-size: 16px;
@@ -117,6 +120,16 @@
       @include vp-768 {
         display: none;
       }
+    }
+
+    &-link:focus-visible {
+      outline: none;
+    }
+
+    &-link:hover &-title,
+    &-link:focus-visible &-title {
+      color: $color-royal-blue-1;
+      outline: none;
     }
 
     @include vp-768 {
@@ -157,10 +170,17 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
+    transition: color 0.3s ease;
+    outline: none;
 
     @include vp-768 {
       font-size: 13px;
       line-height: 16px;
+    }
+
+    &:hover, &:focus-visible {
+      color: $color-royal-blue-1;
+      outline: none;
     }
   }
 

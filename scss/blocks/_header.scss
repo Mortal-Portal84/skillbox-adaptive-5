@@ -81,6 +81,7 @@
     outline: none;
     background-color: transparent;
     cursor: pointer;
+    transition: color 0.3s ease;
 
     &:hover,
     &:focus-visible,
@@ -128,6 +129,7 @@
 
   &__search {
     margin: 0 20px 0 0;
+    transition: color 0.3s ease;
 
     @include vp-1024 {
       margin: 0 28px 0 0;

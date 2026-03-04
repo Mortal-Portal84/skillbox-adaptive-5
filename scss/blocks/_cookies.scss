@@ -12,7 +12,7 @@
 
   @include vp-1304 {
     position: fixed;
-    bottom: -7px;
+    bottom: 16px;
     right: 16px;
   }
 
@@ -90,9 +90,11 @@
       cursor: pointer;
       color: $color-mischka;
       transition: color 0.3s ease;
+      outline: none;
 
       &:hover, &:focus-visible {
         color: $color-royal-blue-1;
+        outline: none;
       }
 
       @include vp-768 {
