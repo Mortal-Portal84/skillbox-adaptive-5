@@ -24,7 +24,7 @@ paginationList.forEach((item) => {
   item.addEventListener('click', (e) => {
     e.preventDefault()
 
-    const counterLink = item.querySelector('a.pagination__link.pagination__link--counter')
+    const counterLink = item.querySelector('a.pagination__link')
 
     if (counterLink) {
       paginationList.forEach((el) => {
@@ -40,6 +40,8 @@ paginationList.forEach((item) => {
 const cookiesModal = document.querySelector('.cookies')
 const cookiesBtn = document.querySelector('.cookies__message-button')
 
-cookiesBtn.addEventListener('click', () => {
-  cookiesModal.classList.remove('cookies--active')
-})
+if (cookiesModal && cookiesBtn) {
+  cookiesBtn.addEventListener('click', () => {
+    cookiesModal.classList.remove('cookies--active')
+  })
+}
