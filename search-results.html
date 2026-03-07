@@ -53,6 +53,57 @@
       </button>
     </div>
   </div>
+
+  <form class="search-form search-form--headed search-form--closed">
+    <div class="search-form__wrapper">
+      <div class="container">
+        <div class="search-form__inner">
+          <div class="custom-input">
+            <input class="custom-input__field" type="text" id="header-search" name="header-search">
+            <label class="custom-input__label" for="header-search">
+              <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-search"></use>
+              </svg>
+            </label>
+            <button class="custom-input__reset-btn" type="reset">
+              <svg class="custom-input__icon" width="14" height="14" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-cross"></use>
+              </svg>
+            </button>
+            <span class="custom-input__error">Неверно заполненное поле</span>
+          </div>
+
+          <button class="btn btn--secondary search-form__form-btn">Найти</button>
+        </div>
+
+        <ul class="search-form__options-list">
+          <li class="search-form__option">
+            <a class="search-form__option-link" href="#">
+              Что входит в&nbsp;Привилегии?
+            </a>
+          </li>
+
+          <li class="search-form__option">
+            <a class="search-form__option-link" href="#">
+              Курсы валют
+            </a>
+          </li>
+
+          <li class="search-form__option">
+            <a class="search-form__option-link" href="#">
+              Где скачать приложение?
+            </a>
+          </li>
+
+          <li class="search-form__option">
+            <a class="search-form__option-link" href="#">
+              Рефинансирование
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </form>
 </header>
 
 <main>

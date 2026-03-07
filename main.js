@@ -1,7 +1,18 @@
+// header search
+const searchBtn = document.querySelector('.header__search')
+const headerSearchForm = document.querySelector('.search-form--headed')
+const searchInput = document.getElementById('header-search')
+
+searchBtn.addEventListener('click', () => {
+  searchBtn.classList.toggle('header__search--active')
+  headerSearchForm.classList.toggle('search-form--closed')
+  searchInput.focus()
+})
+
 // custom input reset
 const resetBtn = document.querySelector('.custom-input__reset-btn')
 const customSearchInput = document.querySelector('.custom-input__field')
-const searchResultsForm = document.querySelector('.search-results__form')
+const searchResultsForm = document.querySelector('.search-form')
 
 customSearchInput.addEventListener('input', () => {
   resetBtn.classList.toggle('active', !!customSearchInput.value);

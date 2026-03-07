@@ -19,6 +19,7 @@
   &__wrapper {
     display: flex;
     align-items: center;
+    position: relative;
   }
 
   &__icon-decor {
@@ -133,6 +134,10 @@
 
     @include vp-1024 {
       margin: 0 28px 0 0;
+    }
+
+    &--active {
+      color: $color-royal-blue-2;
     }
   }
 

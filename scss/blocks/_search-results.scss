@@ -54,26 +54,6 @@
     }
   }
 
-  &__form {
-    $root: &;
-
-    &-inner {
-      @include vp-1024 {
-        display: flex;
-        gap: 16px;
-      }
-    }
-  }
-
-  &__form-btn {
-    display: none;
-
-    @include vp-1024 {
-      display: block;
-      width: 120px;
-    }
-  }
-
   &__results {
     margin: 0;
     padding: 60px 0 62px 0;
@@ -146,41 +126,6 @@
 
     @include vp-1024 {
       margin: 0 0 59px 0;
-    }
-  }
-
-  &__options-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px 12px;
-    padding: 20px 0 40px 0;
-    margin: 0;
-    list-style: none;
-    border-bottom-left-radius: 24px;
-    border-bottom-right-radius: 24px;
-  }
-
-  &__option {
-    width: fit-content;
-  }
-
-  &__option-link {
-    display: block;
-    padding: 12px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-    transition: color 0.3s ease;
-    outline: none;
-
-    @include vp-768 {
-      font-size: 13px;
-      line-height: 16px;
-    }
-
-    &:hover, &:focus-visible {
-      color: $color-royal-blue-1;
-      outline: none;
     }
   }
 
